@@ -19,3 +19,13 @@ const vowelsString = () => {
     description.innerHTML = `There are ${result} vowels in <span style="color: red">${input.value.toLowerCase()}`;
     input.value="";
 };
+
+input.addEventListener("keydown",(e) => {
+    if(e.code === "Enter"){
+        button.click();
+    }
+});
+
+window.onload = () => {
+    input.focus();
+};
